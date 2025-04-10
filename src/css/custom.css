@@ -1,0 +1,128 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2d6c81;
+  --ifm-color-primary-dark: #2d6c81;
+  --ifm-color-primary-darker: #2d6c81;
+  --ifm-color-primary-darkest: #2d6c81;
+  --ifm-color-primary-light: #2d6c81;
+  --ifm-color-primary-lighter: #2d6c81;
+  --ifm-color-primary-lightest: #2d6c81;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #fdf6ec;
+  --ifm-navbar-background-color: #fdf6ec;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  font-family: "Courier Prime", monospace;
+  /* font-family: "Playfair Display", serif; */
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #fdf6ec;
+  box-shadow: none;
+  height: 80px;
+}
+
+.navbar__title,
+.navbar__item {
+  color: var(--ifm-color-primary);
+}
+
+.navbar__item:hover {
+  color: #5d7e7c;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* NAVBAR - MOBILE */
+
+.navbar-sidebar__brand {
+  box-shadow: none;
+  height: 80px;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: #fdf6ec;
+}
+
+#logo-home {
+  max-width: 16rem;
+}
+
+#logo-text {
+  max-width: 14rem;
+}
+
+.footer {
+  background-color: #fdf6ec;
+  color: var(--ifm-color-primary);
+}
+
+button, .button {
+  font-family: "Courier Prime", monospace;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  padding-top: 12px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+  background-color: #5d7e7c;
+}
+
+button:disabled, .button:disabled {
+  background-color: #fdf6ec;
+  cursor: not-allowed;
+}
