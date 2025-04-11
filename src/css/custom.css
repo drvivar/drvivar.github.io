@@ -10,7 +10,7 @@
   --ifm-color-primary-dark: #2d6c81;
   --ifm-color-primary-darker: #2d6c81;
   --ifm-color-primary-darkest: #2d6c81;
-  --ifm-color-primary-light: #2d6c81;
+  --ifm-color-primary-light: #5d7e7c;
   --ifm-color-primary-lighter: #2d6c81;
   --ifm-color-primary-lightest: #2d6c81;
   --ifm-code-font-size: 95%;
@@ -21,14 +21,15 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #2d6c81;
+  --ifm-color-primary-dark: #2d6c81;
+  --ifm-color-primary-darker: #2d6c81;
+  --ifm-color-primary-darkest: #2d6c81;
+  --ifm-color-primary-light: #5d7e7c;
+  --ifm-color-primary-lighter: #2d6c81;
+  --ifm-color-primary-lightest: #2d6c81;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-navbar-background-color: #1b1b1d;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
@@ -40,6 +41,12 @@ html {
   font-weight: 400;
   font-style: normal;
   text-align: justify;
+}
+
+@media (max-width: 768px) {
+  html {
+    text-align: left;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +62,6 @@ h2 {
 /* NAVBAR */
 
 .navbar {
-  background-color: #fdf6ec;
   box-shadow: none;
   height: 80px;
 }
@@ -66,7 +72,7 @@ h2 {
 }
 
 .navbar__item:hover {
-  color: #5d7e7c;
+  color: var(--ifm-color-primary-light);
 }
 
 .navbar__logo {
@@ -89,7 +95,7 @@ h2 {
 }
 
 .menu__link--active:not(.menu__link--sublist) {
-  background-color: #fdf6ec;
+  background-color: var(--ifm-navbar-background-color);
 }
 
 #logo-home {
@@ -101,14 +107,14 @@ h2 {
 }
 
 .footer {
-  background-color: #fdf6ec;
+  background-color: var(--ifm-navbar-background-color);
   color: var(--ifm-color-primary);
 }
 
 button, .button {
   font-family: "Courier Prime", monospace;
   background-color: var(--ifm-color-primary);
-  color: white;
+  color: var(--ifm-navbar-background-color);
   border: none;
   padding: 10px 20px;
   padding-top: 12px;
@@ -119,10 +125,10 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  background-color: #5d7e7c;
+  color: var(--ifm-color-primary-light);
 }
 
 button:disabled, .button:disabled {
-  background-color: #fdf6ec;
+  background-color: var(--ifm-navbar-background-color);
   cursor: not-allowed;
 }
